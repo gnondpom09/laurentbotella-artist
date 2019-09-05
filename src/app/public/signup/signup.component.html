@@ -1,0 +1,18 @@
+<form (ngSubmit)="signup()" [formGroup]="signupForm">
+    <h2 style="text-align: center">S'enregitrer</h2>
+    <mat-form-field>
+        <input type="text" matInput placeholder="Pseudo" name="username" [formControl]="usernameCtrl">
+    </mat-form-field>
+    <mat-form-field>
+        <input type="email" matInput placeholder="Email" name="email" [formControl]="emailCtrl">
+    </mat-form-field>
+    <div formGroupName="passwordForm">
+        <mat-form-field>
+            <input type="password" matInput placeholder="Mot de passe" name="password" [formControl]="passwordCtrl">
+        </mat-form-field>
+        <mat-form-field>
+            <input type="confirm" matInput placeholder="Répéter le mot de passe" name="confirm" [formControl]="confirmCtrl">
+        </mat-form-field>
+    </div>
+    <button class="submit" color="primary" type="submit" mat-flat-button>Valider</button>
+</form>

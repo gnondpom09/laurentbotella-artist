@@ -1,0 +1,8 @@
+<figure>
+    <img [src]="painting.thumb" [alt]="painting.title">
+    <figcaption>
+        {{painting.title}}
+    </figcaption>
+</figure>
+<button (click)="viewDetail(painting)">Voir détails</button>
+<!-- <lba-painting-detail [painting]="painting" (image)="viewLarge($event)"></lba-painting-detail> -->

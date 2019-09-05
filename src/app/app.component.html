@@ -1,4 +1,21 @@
+<mat-sidenav-container class="container">
 
-<lba-home></lba-home>
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+        <div class="lb-list">
+            <a mat-button *ngFor="let p of pages" (click)="openPage(p.path)">
+                {{p.path}}
+            </a>
+        </div>
+    </mat-sidenav>
 
-<router-outlet></router-outlet>
+    <mat-sidenav-content>
+
+        <p><button mat-button (click)="sidenav.toggle()">Menu</button></p>
+        <div (click)="closeNav()" class="container">
+            <p routerLink="/">Signature</p>
+            <router-outlet></router-outlet>
+        </div>
+
+    </mat-sidenav-content>
+
+</mat-sidenav-container>

@@ -1,0 +1,13 @@
+:host {
+    display: flex;
+    min-height: 100vh;
+    .container {
+        width: 100%;
+        height: 100vh;
+        .lb-list {
+            a {
+                display: block;
+            }
+        }
+    }
+}

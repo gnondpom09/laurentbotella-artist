@@ -1,0 +1,14 @@
+:host {
+    form {
+        width: 300px;
+        margin: auto;
+        padding: 20px;
+        box-shadow: 0 0 5px 2px rgba(120, 120, 120, 0.5);
+        mat-form-field {
+            width: 100%;
+        }
+        .submit {
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<form (ngSubmit)="login()" [formGroup]="loginForm">
+    <h2 style="text-align: center">Login</h2>
+    <mat-form-field>
+        <input type="email" matInput placeholder="Email" name="email" [formControl]="emailCtrl">
+    </mat-form-field>
+    <mat-form-field>
+        <input type="password" matInput placeholder="Mot de passe" name="password" [formControl]="passwordCtrl">
+    </mat-form-field>
+    <button class="submit" color="primary" type="submit" mat-flat-button>Connexion</button>
+</form>
+<a routerLink="/signup">Pas encore inscrit</a>

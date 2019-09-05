@@ -4,11 +4,13 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { firebaseConfig } from 'src/environments/environment';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material';
+import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule, MatFormFieldModule } from  '@angular/material';
 
 @NgModule({
   declarations: [
@@ -21,10 +23,17 @@ import { MatButtonModule } from '@angular/material';
     AngularFireDatabaseModule,
     AngularFirestoreModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    FormsModule,
+    ReactiveFormsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    MatIconModule,
+    MatFormFieldModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
