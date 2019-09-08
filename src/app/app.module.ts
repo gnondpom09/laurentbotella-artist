@@ -10,7 +10,7 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { firebaseConfig } from 'src/environments/environment';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule, MatFormFieldModule } from  '@angular/material';
+import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatButtonModule, MatFormFieldModule, MatGridListModule } from  '@angular/material';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,8 @@ import { MatToolbarModule, MatIconModule, MatSidenavModule, MatListModule, MatBu
     MatListModule,
     MatButtonModule,
     MatIconModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatGridListModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [AngularFireAuth],

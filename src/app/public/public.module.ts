@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { PublicRoutingModule } from './public-routing.module';
@@ -33,6 +33,7 @@ import { PaintingComponent } from './painting/painting.component';
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class PublicModule { }

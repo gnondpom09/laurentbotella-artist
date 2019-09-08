@@ -1,4 +1,12 @@
-
+<!-- 
 <div *ngFor="let painting of paintings">
     <lba-painting [painting]="painting"></lba-painting>
-</div>
+</div> -->
+
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile
+        *ngFor="let painting of paintings"
+        [style.background]="painting.thumb">
+      {{painting.title}}
+    </mat-grid-tile>
+  </mat-grid-list>
